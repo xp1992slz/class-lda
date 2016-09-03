@@ -21,7 +21,7 @@
 
 #ifndef CORPUS_H
 #define CORPUS_H
-
+#include <iostream>
 #include <vector>
 using namespace std;
 
