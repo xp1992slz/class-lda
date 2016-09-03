@@ -27,7 +27,7 @@
 #include <gsl/gsl_multimin.h>
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_randist.h>
-
+#include <iostream>
 const int NUM_INIT = 50;
 const int LAG = 10;
 const int LDA_INIT_MAX = 0;
@@ -633,7 +633,7 @@ void slda::mle(suffstats * ss, int eta_update, const settings * setting)
 
 	for (int i = 0; i < num_classes-1; i++)
 		delete[] tmp_x[i];
-	delete tmp_x;
+	delete[] tmp_x;
 	printf("final f: %f\n", f);
 }
 
